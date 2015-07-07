@@ -1,0 +1,1 @@
+A demo application as part of a Docker pipeline. Use this repo to analyze Natural Language from data received from a JSON file.
