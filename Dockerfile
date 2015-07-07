@@ -5,8 +5,6 @@ RUN apt-get update
 RUN apt-get -y install python
 
 ADD . /app
-WORKDIR /app
-
 
 RUN cd /app; pip install -r requirements.txt
 
