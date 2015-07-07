@@ -17,12 +17,12 @@ from nltk.corpus import stopwords
 
 # r = requests.get('http://www.myapifilms.com/imdb/comingSoon')
 
-with open('output.json') as data:
+with open('..containers/ahab/output.json') as data:
 	d = json.load(data)
 	pprint(d)
 
 print "DONE PRINTING IN PYTHON"
 
-with open('./ahab/output.json', 'w') as outfile:
+with open('..containers/ahab/python_output.json', 'w') as outfile:
 	json.dump(d, outfile)
 	print "SUCCESSFULLY OUTPUT TO JSON"
