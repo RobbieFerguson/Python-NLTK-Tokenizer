@@ -14,15 +14,15 @@ from nltk.corpus import stopwords
 
 # print letters_only
 
-r = requests.get('http://www.myapifilms.com/imdb/comingSoon')
+# r = requests.get('http://www.myapifilms.com/imdb/comingSoon')
 
-with open('../ahab_demo1_node/output.json', 'wb') as f:
-	for chunk in r.iter_content(chunk_size=1024):
-		if chunk:
-			f.write(chunk)
+# with open('../ahab_demo1_node/output.json', 'wb') as f:
+# 	for chunk in r.iter_content(chunk_size=1024):
+# 		if chunk:
+# 			f.write(chunk)
 
 data = []
-with open('../ahab_demo1_node/output.json') as f:
+with open('output.json') as f:
 	for line in f:
 		data.append(json.loads(line))
 
