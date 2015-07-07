@@ -1,4 +1,4 @@
-FROM python:3-onbuild
+FROM python:2-onbuild
 
 # Set the default command to run
 CMD ["python", "./app.py"]

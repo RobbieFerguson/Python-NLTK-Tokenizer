@@ -3,6 +3,7 @@ import re
 import nltk
 import requests
 import json
+from pprint import pprint
 # from ahab import output.json
 
 
@@ -16,15 +17,12 @@ from nltk.corpus import stopwords
 
 # r = requests.get('http://www.myapifilms.com/imdb/comingSoon')
 
-# with open('../ahab_demo1_node/output.json', 'wb') as f:
-# 	for chunk in r.iter_content(chunk_size=1024):
-# 		if chunk:
-# 			f.write(chunk)
+with open('output.json') as data:
+	d = json.load(data)
+	pprint(d)
 
-data = []
-with open('output.json') as f:
-	for line in f:
-		data.append(json.loads(line))
+print "DONE PRINTING IN PYTHON"
 
-print "PRINTING FROM PYTHON"
-print data
+with open('./ahab/output.json', 'w') as outfile:
+	json.dump(d, outfile)
+	print "SUCCESSFULLY OUTPUT TO JSON"
