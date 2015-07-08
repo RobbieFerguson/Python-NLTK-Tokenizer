@@ -39,4 +39,5 @@ with open('./ahab/output.json', 'w+') as outfile:
 	print "SUCCESSFULLY OUTPUT TO JSON IN PYTHON"
 
 
+print "WORKING IN PYTHON"
 

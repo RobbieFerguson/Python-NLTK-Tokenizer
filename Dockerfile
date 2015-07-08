@@ -7,8 +7,8 @@ FROM python:2.7
 
 COPY . /src
 
-RUN cd /src; pip install --no-cache-dir -r requirements.txt
+RUN cd /src; pip install --no-cache-dir -r requirements.txt; python -c 'import nltk ; nltk.download()''
 
 
-CMD ["python", "import nltk", "nltk.download()"]
+#CMD ["python", "import nltk",";", "nltk.download()"]
 CMD ["python", "/src/app.py"]
