@@ -26,6 +26,6 @@ with open('./ahab/output.json') as data:
 
 print "DONE PRINTING IN PYTHON"
 
-with open('./ahab/python_output.json', 'w') as outfile:
+with open('./ahab/output.json', 'w') as outfile:
 	json.dump(d, outfile)
 	print "SUCCESSFULLY OUTPUT TO JSON"
