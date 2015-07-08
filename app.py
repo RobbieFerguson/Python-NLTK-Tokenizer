@@ -1,31 +1,41 @@
 import os
 import re
 import nltk
-import requests
+nltk.download('punkt')
 import json
 from pprint import pprint
-# from ahab import output.json
 
+from nltk.tokenize import word_tokenize
 
-from nltk.corpus import stopwords
-
-# print stopwords.words("english")
-
-# letters_only = re.sub("[^a-zA-Z]", " ", input.json)
-
-# print letters_only
-
-# r = requests.get('http://www.myapifilms.com/imdb/comingSoon')
-
-print "CWD"
-print os.getcwd()
+# print "CWD"
+# print os.getcwd()
 
 with open('./ahab/output.json') as data:
 	d = json.load(data)
-	pprint(d)
 
-print "DONE PRINTING IN PYTHON"
+toReturn = {}
+
+for movie in d["MovieReviews"]:
+	review = movie["Review"] 
+	review = re.sub("<[^>]*>", "",movie["Review"])
+	rating = movie["Rating"]
+
+
+	tokens = word_tokenize(review)
+	tagged = nltk.pos_tag(tokens)
+
+	if rating in toReturn:
+		toReturn[rating] += tagged
+	else:
+		toReturn[rating] = tagged
+
+
+
+
 
 with open('./ahab/output.json', 'w') as outfile:
-	json.dump(d, outfile)
-	print "SUCCESSFULLY OUTPUT TO JSON"
+	json.dump(toReturn, outfile)
+	print "SUCCESSFULLY OUTPUT TO JSON IN PYTHON"
+
+
+
