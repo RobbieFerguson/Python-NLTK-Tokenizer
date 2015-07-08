@@ -32,8 +32,9 @@ for movie in d["MovieReviews"]:
 
 
 
+os.mkdir("ahab")
 
-with open('./ahab/output.json', 'w') as outfile:
+with open('./ahab/output.json', 'w+') as outfile:
 	json.dump(toReturn, outfile)
 	print "SUCCESSFULLY OUTPUT TO JSON IN PYTHON"
 
