@@ -7,6 +7,6 @@ FROM python:2.7
 
 COPY . /src
 
-RUN cd /src; pip install --no-cache-dir -r requirements.txt
+RUN cd /src; pip install --no-cache-dir -r requirements.txt; pip install -U nltk
 
 CMD ["python", "/src/app.py"]
