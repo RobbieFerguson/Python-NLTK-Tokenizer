@@ -17,7 +17,10 @@ from nltk.corpus import stopwords
 
 # r = requests.get('http://www.myapifilms.com/imdb/comingSoon')
 
-with open('./output.json') as data:
+print "CWD"
+print os.getcwd()
+
+with open('../ahab/output.json') as data:
 	d = json.load(data)
 	pprint(d)
 
