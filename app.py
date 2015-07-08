@@ -20,12 +20,12 @@ from nltk.corpus import stopwords
 print "CWD"
 print os.getcwd()
 
-with open('output.json') as data:
+with open('./ahab/output.json') as data:
 	d = json.load(data)
 	pprint(d)
 
 print "DONE PRINTING IN PYTHON"
 
-with open('python_output.json', 'w') as outfile:
+with open('./ahab/python_output.json', 'w') as outfile:
 	json.dump(d, outfile)
 	print "SUCCESSFULLY OUTPUT TO JSON"
