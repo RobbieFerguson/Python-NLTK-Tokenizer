@@ -1,6 +1,4 @@
 nltk==3.0.3
-numpy==1.9.2
-psycopg2==2.5.4
 python-dateutil==2.4.2
 pytz==2015.4
 requests==2.7.0

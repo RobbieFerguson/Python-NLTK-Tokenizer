@@ -1,16 +1,12 @@
-FROM python:2-onbuild
+#FROM python:2-onbuild
 
-# Set the default command to run
-
-
-#FROM ubuntu:14.04
+FROM python:2.7
 
 #RUN sudo apt-get update
 #RUN sudo apt-get install -y python
 
-#COPY . /src
+COPY . /src
 
-#RUN cd /src
-#RUN pip install -r requirements.txt
+RUN cd /src; pip install --no-cache-dir -r requirements.txt
 
-CMD ["python", "./app.py"]
+CMD ["python", "/src/app.py"]
