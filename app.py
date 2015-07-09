@@ -6,6 +6,7 @@ from pprint import pprint
 
 nltk.download('punkt')
 nltk.download('maxent_treebank_pos_tagger')
+
 from nltk.tokenize import word_tokenize, wordpunct_tokenize
 
 # print "CWD"
