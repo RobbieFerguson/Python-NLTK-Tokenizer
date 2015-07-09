@@ -1,11 +1,13 @@
 import os
 import re
 import nltk
-nltk.download('punkt')
 import json
 from pprint import pprint
 
-from nltk.tokenize import word_tokenize
+nltk.download('punkt')
+
+from nltk.tokenize import word_tokenize, wordpunct_tokenize
+
 
 # print "CWD"
 # print os.getcwd()
