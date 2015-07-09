@@ -12,15 +12,10 @@
 
 # CMD ["python", "/src/app.py"]
 
-FROM python:2.7
+FROM python:2.7.8
+MAINTAINER Jonathan Evans "jon@trackmaven.com"
 
 RUN pip install -U nltk
 
-COPY . / src
-
-RUN cd /src; pip install --no-cache-dir -r requirements.txt;
-
 ENV CORPORA brown
 CMD python -m nltk.downloader $CORPORA; python
-
-CMD ["python", "/src/app.py"]
